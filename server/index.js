@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 
 import postRoutes from './routes/posts.js'
-import userRouter from './routes/user.js'
+// import userRouter from './routes/user.js'
 
 const app = express()
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
@@ -13,7 +13,7 @@ app.use(cors())
 
 app.use('/posts',postRoutes)
 
-app.use('/user', userRouter)
+// app.use('/user', userRouter)
 
 const CONNECTION_URL = "mongodb+srv://majorproject:<@Saritha954@majorprojectcluster.trma74d.mongodb.net/?retryWrites=true&w=majority"
 
