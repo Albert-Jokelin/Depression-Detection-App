@@ -19,6 +19,8 @@ const CONNECTION_URL = "mongodb+srv://majorproject:%40Saritha954@majorprojectclu
 
 const PORT = process.env.PORT || 5000
 
+console.log("NodeJS server listening on port %d in %s mode", PORT, app.settings.env)
+
 mongoose
   .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
