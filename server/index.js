@@ -15,7 +15,7 @@ app.use('/posts',postRoutes)
 
 app.use('/user', userRouter)
 
-const CONNECTION_URL = "mongodb+srv://MinorProjectGroup:123123MP@minorprojectcluster.eoq7a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const CONNECTION_URL = "mongodb+srv://majorproject:<@Saritha954@majorprojectcluster.trma74d.mongodb.net/?retryWrites=true&w=majority"
 
 const PORT = process.env.PORT || 5000
 
