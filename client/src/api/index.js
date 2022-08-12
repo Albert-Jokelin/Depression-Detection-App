@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' })
+const API = axios.create({ baseURL: 'https://cryptic-chamber-85334.herokuapp.com' })
 
 
 // API.interceptors.request.use((req) => {
@@ -14,7 +14,7 @@ const API = axios.create({ baseURL: 'http://localhost:5000' })
 // })
 
 export const fetchPosts = () => API.get('/posts')
-export const createPost = (newPost) => 
+export const createPost = (newPost) =>
   API.post('/posts', newPost)
   .then((res) => {
     console.log("api",res)
