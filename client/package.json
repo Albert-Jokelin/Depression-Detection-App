@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react-transition-group": "^4.4.4",
     "audio-react-recorder": "^1.0.4",
+    "autoprefixer": "10.4.5",
     "axios": "^0.25.0",
     "bootstrap": "^5.1.3",
     "material-icons-react": "^1.0.4",
@@ -60,5 +61,8 @@
   },
   "devDependencies": {
     "babel-runtime": "^6.26.0"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
   }
 }
