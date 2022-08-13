@@ -1,1 +1,1 @@
-web: npm install && npm run build && npm install -g serve to heroku-postbuild
+web: npm install && npm run web && npm install -g serve to heroku-postbuild
