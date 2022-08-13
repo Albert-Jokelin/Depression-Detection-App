@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
+import Navbar from './components/navbar'
+import Home from './components/home'
 // import Auth4 from './components/Auth4'
-import './App.css'
+import './app.css'
 
 const App = () => {
   return (
