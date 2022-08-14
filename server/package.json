@@ -7,7 +7,7 @@
   "scripts": {
     "client-install": "npm install --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"cd.. && cd client && npm run start\" \"npm run start\" \"cd controllers && python pythonClassifier.py\" \"cd controllers && python audioFlask.py\"",
     "web": "concurrently \"cd.. && cd client && npm run start\" \"npm run start\""
