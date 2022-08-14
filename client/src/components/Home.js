@@ -169,7 +169,7 @@ const Home = () => {
     const imageSrc = webcamRef.current.getScreenshot()
     // console.log(imageSrc)
     axios
-      .post('http://localhost:5000/posts/imageDetect', {
+      .post('https://cryptic-chamber-85334.herokuapp.com/posts/imageDetect', {
         message: imageSrc,
       })
       .then((res) => {
@@ -414,7 +414,7 @@ const Home = () => {
               reader.onloadend = function () {
                 var audioSrc = reader.result
                 axios
-                  .post('http://localhost:5000/posts/audioDetect', {
+                  .post('https://cryptic-chamber-85334.herokuapp.com/posts/audioDetect', {
                     message: audioSrc,
                   })
                   .then((res) => {
