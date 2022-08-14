@@ -23,7 +23,7 @@ export const createPost = (newPost) =>
     console.log(err)
   })
 
-export const getResult = () => API.get('/result')
+export const getResult = () => API.get('/posts/result')
 
 export const deletePost = (id) => API.delete(`/posts/${id}`)
 
