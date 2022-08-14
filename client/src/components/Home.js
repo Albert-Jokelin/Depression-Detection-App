@@ -53,7 +53,7 @@ const Home = () => {
       <div className='postTile'>
         <p class='card-body flex-column align-items-start active'>
           <div class='card-header d-flex w-100 justify-content-between'>
-            <h5 class='mb-1'>New Jornal Entry</h5>
+            <h5 class='mb-1'>New Journal Entry</h5>
           </div>
           <div class='card-header d-flex w-100 justify-content-between'>
             <h6 class='mb-1'>
@@ -201,7 +201,7 @@ const Home = () => {
     const postTemp = { message: post.message, depressionVideo: depVideo }
     setPostData({ message: post.message })
     await dispatch(createPost(postTemp))
-    const data = await axios.get('http://localhost:5000/posts/result')
+    const data = await axios.get('https://cryptic-chamber-85334.herokuapp.com/posts/result')
     setResultPost(data.data)
     setCheckButton(false)
     setPostData({ message: '' })
