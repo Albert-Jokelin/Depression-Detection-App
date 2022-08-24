@@ -44,7 +44,7 @@ export const createPost = async (req, res) => {
     .catch(function (err) {
       console.log('err')
     })
-  
+
   const depression = (Math.max(value,post.depressionVideo)>0.40) ? true : false
   const addPost = {message: message, depressionText: value*100, depressionVideo: post.depressionVideo*100, depression: depression}
   const newPost = new PostMessage(addPost)
@@ -115,7 +115,7 @@ export const audioDetect = async (req, res) => {
   var value = 0.75689
   // message = message.length > 35 ? message.substring(35) : ''
   const post = { message: message}
-  const post1 = { message:'anis'}
+  // const post1 = { message:'anis'}
   console.log('audioDetect')
   var options = {
     method: 'POST',
