@@ -16,13 +16,13 @@ def audioDetect():
  audio_data = data['message']
  audio_data = audio_data[35:]
  audio_data = audio_data.encode('utf-8')
- 
+
  with open('audio.wav', 'wb') as f:
   f.write(base64.b64decode(audio_data))
  mfcc = 128
 
  def features_extractor(file_name):
-  audio, sample_rate = librosa.load(file_name, res_type='kaiser_fast') 
+  audio, sample_rate = librosa.load(file_name, res_type='kaiser_fast')
   mfccs_features = librosa.feature.mfcc(y=audio, sr=sample_rate, n_mfcc=mfcc)
   mfccs_scaled_features = np.mean(mfccs_features.T,axis=0)
   return mfccs_scaled_features
@@ -44,8 +44,8 @@ def audioDetect():
  model.load_weights("Audio_Classifier.h5")
 
 
-     
- a,b = librosa.load("audio.wav", res_type='kaiser_fast') 
+
+ a,b = librosa.load("audio.wav", res_type='kaiser_fast')
 
  mfccs_features = librosa.feature.mfcc(y=a, sr=b, n_mfcc=mfcc)
  mfccs_scaled_features = np.mean(mfccs_features.T,axis=0)
@@ -57,6 +57,6 @@ def audioDetect():
  print(y1[0][0])
  final_result=float(y1[0][0])
  return json.dumps({"result":final_result})
- 
+
 if __name__ == "__main__":
  app.run(port=8005)

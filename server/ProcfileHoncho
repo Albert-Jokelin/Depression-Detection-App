@@ -1,0 +1,2 @@
+server: npm install && npm install concurrently --save && npm install nodemon --save && npm run web && npm install -g serve to heroku-postbuild
+python: cd controllers && pip install -r requirements.txt && python audioFlask.py && python pythonClassifier.py
